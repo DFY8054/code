@@ -35,11 +35,11 @@ def ut_badminton_schedule():
 
     content = ''
     for i in range(len(items)):
-        if (items[i][0] != ''):
+        if items[i][0] != '':
             current_day = items[i][0].split(',')
         else:
             content += f'{current_day[0]}  {current_day[1]}  {location_map[items[i][1]]}  {items[i][1]}  {items[i][2]}\n'
-            if (current_day[0] == 'Sunday'):
+            if current_day[0] == 'Sunday':
                 content += '\n'
     send_mail(content)
 
